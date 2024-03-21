@@ -1,0 +1,20 @@
+{
+  "name": "gym-beam/module-app",
+  "version": "1.0.0",
+  "description": "This module is responsible for Product Attributes Management",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*"
+  },
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "GymBeam\\App\\": ""
+    }
+  }
+}

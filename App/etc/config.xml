@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <gymbeam_modules>
+            <general>
+                <api_enable>1</api_enable>
+                <log_enable>1</log_enable>
+            </general>
+        </gymbeam_modules>
+    </default>
+</config>

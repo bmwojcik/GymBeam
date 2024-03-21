@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="GymBeam\App\Api\AttributeManagementInterface" type="GymBeam\App\Model\AttributeManagement"/>
+
+    <virtualType name="GymBeam\App\Logger\Handler\ApiDebugHandler" type="Magento\Framework\Logger\Handler\Base">
+        <arguments>
+            <argument name="fileName" xsi:type="string">/var/log/gymbeam/api.log</argument>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="GymBeam\App\Logger\ApiDebugLogger" type="Monolog\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">GymBeam API Debug Logger</argument>
+            <argument name="handlers" xsi:type="array">
+                <item name="debug" xsi:type="object">GymBeam\App\Logger\Handler\ApiDebugHandler</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <type name="GymBeam\App\Model\AttributeManagement">
+        <arguments>
+            <argument name="logger" xsi:type="object">GymBeam\App\Logger\ApiDebugLogger</argument>
+        </arguments>
+    </type>
+</config>
