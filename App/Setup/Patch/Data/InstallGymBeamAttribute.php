@@ -28,8 +28,7 @@ class InstallGymBeamAttribute implements DataPatchInterface, PatchRevertableInte
     public function __construct(
         ModuleDataSetupInterface $moduleDataSetup,
         EavSetupFactory          $eavSetupFactory
-    )
-    {
+    ) {
         $this->moduleDataSetup = $moduleDataSetup;
         $this->eavSetupFactory = $eavSetupFactory;
     }
@@ -67,7 +66,6 @@ class InstallGymBeamAttribute implements DataPatchInterface, PatchRevertableInte
                 'is_html_allowed_on_front' => true,
                 'apply_to' => 'simple,configurable'
             ]
-
         );
 
         $this->moduleDataSetup->getConnection()->endSetup();
