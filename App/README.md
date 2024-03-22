@@ -14,6 +14,8 @@ POST  example `https://magento.test/rest/V1/gymbeam-attribute` with JSON body
     "productId": 1
 }`
 
+Test 
+`vendor/phpunit/phpunit/phpunit -c dev/tests/unit/phpunit.xml.dist app/code/GymBeam/App/Test/Unit/`
 
 ### Author notes:
     - di.xml range could be restriced to webapi_rest area, however not specified in task if other area has access access (for example cron, adminhtml)
